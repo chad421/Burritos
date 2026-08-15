@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#main-form {
+    justify-content: center;
+    align-items: center;
+    background-color: #16171d;
+    height: 100dvh;
+}
+
+Header {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(38, 38, 80, 0.612);
+}
+
+#login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95.1%;
+
+    input, button {
+        padding: 1em;
+        margin: 0.25em;
+    }
+}
+
+Footer {
+    background-color: rgba(38, 38, 80, 0.612);
+}
