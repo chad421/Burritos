@@ -1,5 +1,10 @@
-export default function() {
+function Header () {
     return(
-        <header>Login Page</header>
+        <>
+            <h1>Hello, this is the Header JSX component</h1>
+            <hr />
+        </>
     )
 }
+
+export default Header

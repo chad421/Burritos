@@ -1,0 +1,25 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+.form-container div {
+    display: flex;
+    align-items: left;
+}
+
+.input-icon {
+    filter: invert(1);
+    width: 25px;
+    height: auto;
+}
+
+.submit-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+    border: 1px solid black;
+}
