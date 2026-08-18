@@ -12,8 +12,11 @@ def get_users():
 
 @router.post("/signup")
 def sign_up(user_info: UserRegister):
+    if db.get(user_info.email, None) is not None:
+        raise ValueError("User Already Exists")
     db[user_info.email] = {
         "email": user_info.email,
+        "username": user_info.username,
         "password": password_hash.hash(user_info.password)
     }
 
