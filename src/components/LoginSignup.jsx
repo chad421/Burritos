@@ -11,9 +11,29 @@ function LoginSignup () {
     const [password, setPassword] = useState("")
 
     // When form is submitted this function is called
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
-        console.log("submitting", email, username, password);
+
+        const userData = {
+            email: email,
+            username: email,
+            password: password
+        }
+
+        try {
+            const request = await fetch('http://localhost:3001/signup', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(userData)
+            })
+
+            console.log(`Success sending user data!`)
+        } catch (error) {
+            console.log(`Error submitting user data:${error}`)
+        }
+        //console.log("submitting", email, username, password);
     }
     
     // When the reset button is pressed, all input fields are cleared
