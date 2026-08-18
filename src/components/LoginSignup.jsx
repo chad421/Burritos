@@ -5,22 +5,24 @@ import usernameIcon from "/src/assets/images/user.png"
 import passwordIcon from "/src/assets/images/padlock.png"
 
 function LoginSignup () {
+    // Collects data from input fields and stores it into these variables
     const [email, setEmail] = useState("")
-    const [firstName, setFirstName] = useState("")
-    const [lastName, setLastName] = useState("")
+    const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
 
+    // When form is submitted this function is called
     function handleSubmit(e) {
         e.preventDefault();
-        console.log("submitting", email, firstName, lastName, password);
+        console.log("submitting", email, username, password);
     }
     
+    // When the reset button is pressed, all input fields are cleared
     function handleReset(e) {
         setEmail("")
-        setFirstName("")
-        setLastName("")
+        setUsername("")
         setPassword("")
     }
+
     return(
         <>
             <h2>Welcome, sign up below</h2>
@@ -46,15 +48,9 @@ function LoginSignup () {
                     />
                     <input 
                         type="text"
-                        value={firstName} 
-                        onChange={(e) => setFirstName(e.target.value)}
-                        placeholder="First Name"
-                    />
-                    <input 
-                        type="text" 
-                        value={lastName} 
-                        onChange={(e) => setLastName(e.target.value)}
-                        placeholder="Last Name"
+                        value={username} 
+                        onChange={(e) => setUsername(e.target.value)}
+                        placeholder="Username"
                     />
                 </div>
                 <div className="password-container">
